@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InitController;
+use App\Http\Controllers\ManagerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,5 +33,9 @@ Route::middleware('auth')->group(function () {
 // app initialisation (first user creation)
 Route::get('/init', [InitController::class, 'initView'])->name('init.get');
 Route::post('/init', [InitController::class, 'init'])->name('init.post');
+
+// Manage user roles & permissions
+Route::get('/manager/role-et-permissions', [ManagerController::class, 'managerView'])->name('manager.index');
+
 
 require __DIR__.'/auth.php';

@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware("auth:sanctum")->group(function () {
     Route::get('/roles', [ManagerController::class, 'index'])->name('manager.index');
 });
+
+Route::post('/roles/add-permission', [ManagerController::class, 'setPermission'])->name('manager.setPermission');

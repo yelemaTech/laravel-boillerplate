@@ -36,6 +36,11 @@ Route::post('/init', [InitController::class, 'init'])->name('init.post');
 
 // Manage user roles & permissions
 Route::get('/manager/role-et-permissions', [ManagerController::class, 'managerView'])->name('manager.index');
+Route::post('/manager/store-role', [ManagerController::class, 'storeRole'])->name('manager.store.role');
+Route::post('/manager/store-permissions', [ManagerController::class, 'storePermission'])->name('manager.store.permission');
+
+Route::get('/manager/role/{role}/details', [ManagerController::class, 'showRole'])->name('manager.show.role');
+Route::patch('/manager/role/{role}/attach-permission', [ManagerController::class, 'attachPermission'])->name('manager.role.attach.permission');
 
 
 require __DIR__.'/auth.php';

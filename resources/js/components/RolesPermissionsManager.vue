@@ -1,23 +1,7 @@
 <template>
-    <div class="flex justify-between gap-2 px-5 py-5 mb-4">
-        <div class="block border p-2">
-            <div>
-                <label for="role" class="block font-medium text-sm text-gray-700">New Role</label>
-                <input type="text" id="role" name="role" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-                <button type="submit" class="block items-center mt-3 px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150">ENREGISTRER</button>
-            </div>
-        </div>
 
-        <div class="block">
-            <div>
-                <label for="role" class="block font-medium text-sm text-gray-700">New Role</label>
-                <input type="text" id="role" name="role" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
-            </div>
-        </div>
-    </div>
-
-    <div class="relative overflow-x-auto mt-4">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+    <div class="relative mx-3 mt-4 overflow-x-auto shadow-xl">
+        <table class="w-full text-sm text-left text-gray-500 rtl:text-right">
             <thead class="text-xs text-white uppercase bg-gray-500">
                 <tr>
                     <th scope="col" class="p-2">
